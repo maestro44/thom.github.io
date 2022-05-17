@@ -1,3 +1,5 @@
+import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.2/build/threejs-toys.module.cdn.min.js'
+
 
 // var with an array of colors
 // random picker of colors from array that is returned to the change_color function
@@ -28,3 +30,19 @@ function randomGradient() {
         var newColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
         return newColor;
     }
+
+
+
+neonCursor({
+  el: document.getElementById('app'),
+  shaderPoints: 16,
+  curvePoints: 80,
+  curveLerp: 0.5,
+  radius1: 5,
+  radius2: 30,
+  velocityTreshold: 10,
+  sleepRadiusX: 100,
+  sleepRadiusY: 100,
+  sleepTimeCoefX: 0.0025,
+  sleepTimeCoefY: 0.0025
+})
